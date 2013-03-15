@@ -27,3 +27,21 @@ gem 'default_value_for'
 group :production do
   gem 'newrelic_rpm'
 end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'shoulda-matchers'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'rb-fsevent', '~> 0.9'
+  gem 'shoulda-matchers'
+end
