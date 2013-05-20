@@ -1,5 +1,4 @@
 class Item < ActiveRecord::Base
-  attr_accessible :name, :quantity, :tag_list
   has_many :taggings
   has_many :tags, through: :taggings
 
@@ -10,7 +9,7 @@ class Item < ActiveRecord::Base
   def none?
     quantity < 0
   end
-  
+
   def self.tagged_with(name)
     name.present? ? Tag.find_by_name!(name).items : self
   end
