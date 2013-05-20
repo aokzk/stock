@@ -13,11 +13,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test, :development do
-  gem 'quiet_assets'
-  gem 'sqlite3'
-end
-
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
 gem 'kaminari'
@@ -29,10 +24,11 @@ group :production do
 end
 
 group :test, :development do
+  gem 'quiet_assets'
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'guard-rspec'
-  gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'shoulda-matchers'
